@@ -16,7 +16,6 @@ lerna-debug.log*
 
 # Docker-specific files
 /.dockerignore
-Dockerfile
 .dockerignore
 
 # Environment files
