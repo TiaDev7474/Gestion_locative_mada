@@ -1,11 +1,12 @@
-import './App.css'
-
+import { AppProvider } from './provider'
+import { AppRoutes } from './routes'
+import './index.css'
 function App() {
 
   return (
-   <div>
-    <p className='text-sm'>test</p>
-   </div>
+    <AppProvider>
+      <AppRoutes/>
+    </AppProvider>
   )
 }
 
