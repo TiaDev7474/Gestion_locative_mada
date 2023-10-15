@@ -1,11 +1,11 @@
-import { Description, NavBar } from "../components"
+import { Description, NavBarHeader } from "../components"
 import hand from '../assets/hand.png';
 import { AsideImage } from "../components/Header/AsideImage";
 
 export const LandingPage = () => {
     return (
        <header className="min-h-screen flex flex-col relative">
-          <NavBar />
+          <NavBarHeader />
           <img
               src={hand}
               className="absolute top-8 -z-10"

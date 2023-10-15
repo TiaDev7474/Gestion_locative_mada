@@ -25,7 +25,7 @@ const LeftDiv = () => {
                     <button onClick={() => {}} className='bg-blue-500 text-white'>Create Account</button>
                 </div>
                 <div className='text-center text-sm'>
-                    <p className='text-lg'>Already have a login ? <Link to='auth/login' className='text-blue-500'>Sign in</Link></p>
+                    <p className='text-lg'>Already have a login ? <Link to='/auth/login' className='text-blue-500'>Sign in</Link></p>
                     <p className='opacity-70 '>Try creating an account,I am agreeing to the Rent.com</p>
                     <p ><Link to='' className='text-blue-500' >Term of Service</Link> <span className='opacity-70'>and</span> <Link to='' className='text-blue-500'>Privacy Policy</Link></p>
                 </div>

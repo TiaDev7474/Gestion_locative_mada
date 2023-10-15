@@ -1,6 +1,6 @@
-import { LinkItem } from "../elements"
+import { LinkItem } from "../../elements"
 
-export const NavBar = () => {
+export const NavBarHeader = () => {
     return (
        <nav className="w-full h-[5vh] flex items-center py-10 pl-32 pr-32 ">
             <h2 className="text-4xl font-semibold">Logo.</h2>
@@ -10,7 +10,7 @@ export const NavBar = () => {
                    label="Contact us" 
                 />
                 <LinkItem 
-                   to="/login" 
+                   to="/auth/login" 
                    label="Login" 
                    style="btn btn-outlined "
                 />
