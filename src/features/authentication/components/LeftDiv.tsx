@@ -1,8 +1,15 @@
 import {Link} from "react-router-dom";
 import {ChangeEvent, useState } from "react";
+import {authService} from "../services/auth.services.ts";
+import {InformationType} from "../../../types";
 
 const LeftDiv = () => {
-     const [ information, setInformation ] = useState({})
+     const [ information, setInformation ] = useState<InformationType>({
+         email:'',
+         fname:'',
+         lname:'',
+         password:''
+     })
     const HandleChange = (e:ChangeEvent <HTMLInputElement>  )=>{
         const name = e.target.name
         const value = e.target.value
@@ -22,7 +29,7 @@ const LeftDiv = () => {
                     </div>
                     <input onChange={HandleChange} name='email' type='email' className='bg-transparent p-1 outline-none border border-1 border-[#444] rounded-lg' placeholder='Email'/>
                     <input onChange={HandleChange} name='password' type='password' className='bg-transparent p-1 outline-none border border-1 border-[#444] rounded-lg' placeholder='Password'/>
-                    <button onClick={() => {}} className='bg-blue-500 text-white'>Create Account</button>
+                    <button onClick={() => {authService.HandleClickCreate(information)}} className='bg-blue-500 text-white'>Create Account</button>
                 </div>
                 <div className='text-center text-sm'>
                     <p className='text-lg'>Already have a login ? <Link to='/auth/login' className='text-blue-500'>Sign in</Link></p>
