@@ -1,20 +1,26 @@
 import { LinkItem } from "../../elements"
+import { ProfileInfo } from "../ProfileInfo/ProfileInfo"
 
 export const NavBarHeader = () => {
+   const isAuthenticated = true
     return (
-       <nav className="w-full h-[5vh] flex items-center py-10 pl-32 pr-32 ">
+       <nav className="h-[5vh] flex items-center py-12 pl-24 pr-24 ">
             <h2 className="text-4xl font-semibold">Logo.</h2>
-            <div className="w-full flex items-center justify-end gap-4 text-lg text-white">
-               <LinkItem 
-                   to="/contact" 
-                   label="Contact us" 
-                />
-                <LinkItem 
-                   to="/auth/login" 
-                   label="Login" 
-                   style="btn btn-outlined "
-                />
+            <div className="w-full flex  justify-end gap-4 text-base">
+                {
+                  isAuthenticated ? (
+                     <ProfileInfo username="Riry Nomenjanahary" />
+                  ): (
+                     <LinkItem 
+                     to="/auth/login" 
+                     label="Login" 
+                     style="btn btn-outlined "
+                  />
+                  )
+                }
+              
             </div>
        </nav>
+       
     )
 }
