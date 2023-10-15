@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 import {ChangeEvent, useState } from "react";
 
 const LeftDiv = () => {
-     const [information,setInformation] = useState({})
+     const [ information, setInformation ] = useState({})
     const HandleChange = (e:ChangeEvent <HTMLInputElement>  )=>{
         const name = e.target.name
         const value = e.target.value
