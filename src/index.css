@@ -28,13 +28,18 @@ h1 {
 }
 
 .btn {
-   padding: 18px 24px ;
+   padding: 12px 24px ;
+   width: 10rem;
    text-align: center;
    font-size: 1rem;
 }
 .btn-primary {
   background-color: #646cff;
   color: #f2f2f2;
+}
+.btn-outlined {
+  border: 1px solid #646cff;
+  color: #646cff;
 }
 .btn-lg{
    width: 15rem;
