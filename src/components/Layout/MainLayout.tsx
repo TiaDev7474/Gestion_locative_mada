@@ -7,11 +7,9 @@ type MainLayoutProps = {
 }
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <div className='w-full px-[5%]'>
-        <header>
-            <NavBarHeader />
-        </header>
-         <main className='flex justify-between'>
+    <div className='w-full'>
+         <NavBarHeader />
+         <main className='flex justify-between px-[5%]'>
             <aside>
                 <AsideNav />
             </aside>

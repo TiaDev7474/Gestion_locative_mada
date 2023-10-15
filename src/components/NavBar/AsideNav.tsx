@@ -10,7 +10,7 @@ const AsideNavLinks = [
     {
         label:"Renter Management",
         icon: <MdPeople size="25"/>,
-        to:"/user/message"
+        to:"/user/renter"
     },
 ]
 
