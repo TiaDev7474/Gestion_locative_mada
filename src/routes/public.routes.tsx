@@ -1,6 +1,7 @@
 
-import { AuthRoutes } from "../features/authentication/routes";
+
 import { LandingPage } from "../pages/LandingPage";
+import AuthRouter from "../features/routes/auth.router.tsx";
 
 export const publicRoute = [
     {
@@ -9,7 +10,7 @@ export const publicRoute = [
     },
     {
         path:"/auth/*",
-        element: <AuthRoutes />
+        element: <AuthRouter />
       
     }
 ]
