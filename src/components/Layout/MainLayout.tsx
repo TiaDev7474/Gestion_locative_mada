@@ -13,7 +13,7 @@ export const MainLayout = ({ children }: MainLayoutProps) => {
             <aside>
                 <AsideNav />
             </aside>
-            <section>
+            <section className='w-full'>
                { children }
             </section>
             <aside>
