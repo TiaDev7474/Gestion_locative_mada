@@ -2,17 +2,27 @@ import {PropertyCardType} from "../../../types";
 import House from '../../../assets/interior.jpg';
 import StatusProperty from "./Status.property.tsx";
 import ButtonProperty from "./Button.property.tsx";
+import {useState} from "react";
+import RenterAddModal from "../Modal/RenterAddModal.tsx";
 
 type Props={
     elem:  PropertyCardType
 }
 
 function CardProperty({elem}:Props) {
-
+    const [isAdding,setAdding] = useState<boolean>()
+   const AddNewRenter =  ()=>{
+       setAdding(ancien=>!ancien)
+   }
     return (
         <div className='flex justify-between p-5 bg-gray-400'>
+            {
+                isAdding && (
+                    <RenterAddModal open={isAdding} HandleClick={AddNewRenter}/>
+                )
+            }
             <div className='h-[200px] w-[50%]'>
-                <img src={House} className='w-full h-[200px]' alt='beautiful house'/>
+                <img src={House} className='w-[500px] h-[220px]' alt='beautiful house'/>
             </div>
             <div className=' w-[45%] p-4 space-y-3'>
                 <div className='flex justify-end'>
@@ -28,7 +38,7 @@ function CardProperty({elem}:Props) {
                     <p>{elem.address}</p>
                 </div>
                 <div className='flex justify-end'>
-                    <ButtonProperty/>
+                    <ButtonProperty HandleClickBook={AddNewRenter}/>
                 </div>
             </div>
         </div>
