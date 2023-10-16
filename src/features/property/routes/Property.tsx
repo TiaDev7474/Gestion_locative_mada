@@ -35,7 +35,7 @@ const Property = () => {
             <div className='flex flex-col space-y-5'>
                 {
                     ItemsProperty.map((elem: PropertyCardType,key:number)=>(
-                        <CardProperty  key={key} elem={elem}/>
+                        <CardProperty  key={key} elem={elem}  />
                     ))
                 }
             </div>
