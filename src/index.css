@@ -64,3 +64,24 @@ h1 {
     background-color: #f9f9f9;
   }
 }
+
+.overlay{
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.centrale{
+  position: absolute;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  width: 35%;
+  top: 50%;
+  left: 50%;
+  height: 70vh;
+  transform: translate(-50%,-50%);
+  /* height: 40%; */
+}
