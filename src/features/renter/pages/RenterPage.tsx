@@ -2,12 +2,12 @@ import { AddButton, FilterButton, SearchField, TableView } from "../components"
 
 export const RenterPage = () => {
   return (
-    <div>
-        <div>
-            <h3>Renter Management</h3>
+    <div className="w-full ">
+        <div className="w-full flex justify-between mb-8">
+            <h3 className="text-3xl font-semibold">Renter Management</h3>
             <AddButton />
         </div>
-        <div>
+        <div className="flex justify-between mb-8">
             <SearchField />
             <FilterButton />    
         </div>

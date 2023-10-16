@@ -20,12 +20,14 @@ const tableHeader =[
   ]
 export const TableHeader = () => {
   return (
-    <thead className='table-header'>
+    <thead className='w-full'>
+       <tr className='flex justify-around '>
         {
-        tableHeader.map(item => (
-            <TableTitle title={item.title}/>
-        ))
-        }
+          tableHeader.map(item => (
+              <TableTitle title={item.title}/>
+          ))
+          }
+       </tr>
     </thead>
   )
 }

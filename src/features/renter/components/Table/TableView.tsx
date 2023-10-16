@@ -13,9 +13,9 @@ const renterList = [
 ]
 export const TableView = () => {
   return (
-    <table className='table'>
+    <table className='w-full table-auto'>
         <TableHeader />
-        <tbody>
+        <tbody className='w-full flex'>
             { renterList.map((renter, index) => {
 
             return (

@@ -1,5 +1,6 @@
-import React from 'react'
+
 import { Avatar } from '../../../../elements'
+import { ActionColumn } from './ActionColumn'
 type TableBodyProps = {
     renterId: string
     photo?: string,
@@ -11,14 +12,17 @@ type TableBodyProps = {
 export const TableBody = ( { renter } : { renter:TableBodyProps }) => {
     
   return (
-    <tr className='table-body'>
-        <td className='table-data'> 
+    <tr className='min-h-fit w-full flex justify-around items-center py-4 shadow-sm cursor-pointer duration-75 transition-all'>
+        <td className=''> 
            <Avatar imageSrc={renter.photo ? renter.photo: ''}/>
         </td>
-        <td className='table-data'> { renter.lastname }</td>
-        <td className='table-data'>{ renter.firstname }</td>
-        <td className='table-data'>{renter.email } </td>
-        <td className='table-data'>{ renter.phone }</td>
+        <td className='text-center'> { renter.lastname }</td>
+        <td className='text-center'>{ renter.firstname }</td>
+        <td className='text-center'>{renter.email } </td>
+        <td className='flex justify-center'>{ renter.phone }</td>
+        <td className="flex gap-5">
+            <ActionColumn />
+        </td>
     </tr>
   )
 }

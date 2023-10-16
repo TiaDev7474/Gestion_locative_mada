@@ -17,7 +17,7 @@ const AsideNavLinks = [
 export const AsideNav = () => {
 
   return (
-    <div className={`'w-[18rem]'} transition-all duration-300`}>
+    <div className={`w-[18rem] transition-all duration-300`}>
          <ul className="flex flex-col gap-2">
              {
                 AsideNavLinks.map((link , index) => {

@@ -24,7 +24,7 @@ export const DropDown = (props: DropDownProps) => {
       return null
   }
   return (
-    <div className='w-full absolute '>
+    <div className='w-full absolute z-30 bg-white'>
         <ul className=' w-[15rem] flex flex-col  p-5 shadow-lg text-[#0d0d0d]'>
             { Links.map((link , index)=> {
                   return (
