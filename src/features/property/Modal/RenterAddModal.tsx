@@ -37,7 +37,7 @@ const RenterAddModal = ({open,HandleClick}:Props) => {
             {
                 open && (
                     <div className='overlay' onClick={HandleClick}>
-                        <div className='centrale' onClick={(e)=>e.stopPropagation()}>
+                        <div className='centrale rounded-lg' onClick={(e)=>e.stopPropagation()}>
                             <div className='p-8 flex flex-col space-y-6'>
                                 <h3 className='text-xl'>Renter List</h3>
                                 <div className='flex justify-between items-center'>
